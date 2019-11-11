@@ -1,1 +1,27 @@
-{{train}}
+<div class="container">
+  <div class="form-group">
+    <label>Производитель: </label>
+      <input type="text" class="todo-input" 
+      required maxlength="50"
+      placeholder="Add train" 
+      [(ngModel)] = "trainCreator"/>
+    <label>Номер: </label>
+      <input type="text"
+      required maxlength="8"
+      placeholder="Add number" [(ngModel)] = "trainNumber"/>
+      <button (click) = "addTrain()">Add train</button>
+  </div>
+</div>
+
+<ul>
+  <li *ngFor = "let train of trains">
+    <span>{{train.number}}</span> <div *ngIf = "!train.editing; else editingTrain"  
+    (dblclick) = "editTrain(train); detectType(train)">{{train.creator}}</div>
+    <ng-template #editingTrain><input type="text" class="todo-item-edit" [(ngModel)] = "train.creator" /> {{showType}}
+
+    </ng-template>
+    
+    <div class="remove-item" (click) = "deleteTrain(train.id)"> x</div>
+  </li>
+</ul>
+

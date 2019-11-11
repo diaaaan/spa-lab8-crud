@@ -1,0 +1,30 @@
+.remove-item {
+    cursor: pointer;
+    width: 10px;
+    height: 10px;
+    margin: 10px;
+}
+
+.remove-item :hover {
+      color: black;
+}
+
+.todo-input {
+    font-size: 18px;
+    margin-bottom: 16px;
+}
+  
+.todo-input :focus {
+      outline: 0;
+    }
+
+.todo-item-edit {
+    font-size: 24px;
+    color: #2c3e50;
+    border: 1px solid #ccc;
+    font-family: 'Avenir', Helvetica, Arial, sans-serif;
+}
+
+.todo-item-edit :focus {
+          outline: none;
+        }
